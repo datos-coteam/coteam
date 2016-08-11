@@ -1,0 +1,64 @@
+@import play.i18n._
+
+@(title: String)(content: Html)
+
+<!DOCTYPE display>
+
+<display class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+            <!-- Compressed CSS -->
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/foundation-icons/foundation-icons.css")">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu" data-dropdown-menu>
+                    <li class="topbar-title lead"><a href="/">@Messages.get("portal.title")</a></li>
+                </ul>
+            </div>
+            <form class="top-bar-right" role="search" action="/search">
+                <ul class="menu">
+                    <li><input type="search" class="form-control keyboard" placeholder="@Messages.get("search.placeholder")" name="q"></li>
+                    <li><button type="submit" class="button">@Messages.get("search.button")</button></li>
+                </ul>
+            </form>
+        </div>
+        <div class="wrap">
+        @content
+        </div>
+        <footer class="footer">
+            COTEAM: Corpus de Textos Aljamiado-Moriscos | Portal generado por <a href="http://weso.github.io/Wesby/">Wesby</a>
+        </footer>
+            <!-- Compressed JavaScript -->
+        <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script>
+
+
+        <script src="@routes.Assets.versioned("javascripts/metamorph/lib/metamorph.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("lib/handlebars/dist/handlebars.js")"></script>
+        @*<script src="@routes.Assets.versioned("lib/dustjs-linkedin/dust-full.js")"></script>*@
+        <script src="@routes.Assets.versioned("lib/jsonld.js/jsonld.js")"></script>
+        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(function(){
+            $(document).foundation();
+          });
+        </script>
+        <script src="@routes.Assets.versioned("javascripts/labels.js")" type="text/javascript"></script>
+            <!-- virtual keyboard -->
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.25.29/css/keyboard.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.25.29/css/keyboard-previewkeyset.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.25.29/js/jquery.keyboard.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.25.29/js/jquery.keyboard.extension-all.min.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/keyboard.js")" type="text/javascript"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    </body>
+</display>
