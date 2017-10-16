@@ -73,8 +73,18 @@ a:hover{
     color:#ed7811;
 }
 
+a href{
+	border: none;
+}
+
 a img{
     border: none;
+}
+
+img {
+	/*FJHL*/
+	/*width: 350;*/
+	height: 330;
 }
 
 a.button {
