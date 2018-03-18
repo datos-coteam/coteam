@@ -1,5 +1,5 @@
-@prefix coteam: <http://coteam-sear.rhcloud.com/vocab/coteam#> .
-@prefix : <http://localhost:9000/vocab/coteam#> .
+@prefix coteam: <http://purl.org/coteam#> .
+@prefix : <http://purl.org/coteam#> .
 
 @prefix yago:       <http://yago-knowledge.org/resource/>.
 @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.

@@ -1,18 +1,38 @@
-welcome.test=Bienvenido a Wesby.
+wesby.title=\n\
+ _ _ _         _          ___   ___ \n\
+| | | |___ ___| |_ _ _   |_  | |   |\n\
+| | | | -_|_ -| . | | |  |  _|_| | |\n\
+|_____|___|___|___|_  |  |___|_|___|\n\
+                  |___|             \n\
+                             by WESO
+welcome.test=Welcome to Wesby.
 
-portal.title=COTEAM: Corpus de Textos Aljamiado-Moriscos.
+#portal.title=Wesby 2.0
+portal.title=Coteam. Corpus de textos Aljamiado-Moriscos
 
+#search.button=Search
 search.button=Buscar
-search.placeholder=Buscar palabra
-search.title=Resultados de búsqueda
+#search.placeholder=Search resources
+search.placeholder=Buscar recursos
+#search.title=Search results
+search.title=Resultados de la búsqueda
 
-resource.missingLabel=Recurso sin nombre
-resource.table.properties=Propiedades del recuso
-resource.table.values=Valores
+#resource.missingLabel=Unlabeled resource
+resource.missingLabel=Recurso sis etiquetar
+#resource.table.properties=Property
+resource.table.properties=Propiedad
+#resource.table.values=Value
+resource.table.values=Valorº
+#resource.table.is=Is
 resource.table.is=Es
+#resource.table.of=of
 resource.table.of=de
+#resource.downloadAs=Download as...
 resource.downloadAs=Descargar como...
+#resource.synonyms=Synonyms
 resource.synonyms=Sinónimos
 
+#error.serialise=Coudn't serialize the graph.
 error.serialise=No se pudo serializar el grafo.
-error.404=No se encontró el recurso
+#error.404=Resource not found
+error.404=Recurso no encontrado

@@ -107,6 +107,55 @@ Handlebars.registerHelper('img', function(id, options) {
 });
 
 
+// Concordance helpers
+// ----------------------------------------------------------------------------
+Handlebars.registerHelper('prevP', function(paragraphID) {
+    var morph = Metamorph(Wesby.getSpinner());
+
+    var paragraphName = paragraphID[0].split('/').pop();
+    var paragraphNumber = Number(paragraphName.split('_').pop()) - 1;
+    var book = paragraphID[0].split('/', 5)[4];
+    var prevPID = window.location.origin + '/corpus/' + book + '/parrafo/par_' + pad(paragraphNumber, 6);
+
+    Wesby.getContext(prevPID, function (ctx) {
+        morph.html('<a href="' + prevPID + '">' + ctx['paragraphText'][0] + '</a>');
+        return ctx;
+    });
+
+    return new Handlebars.SafeString(morph.outerHTML());
+});
+
+Handlebars.registerHelper('nextP', function(paragraphID) {
+    var morph = Metamorph(Wesby.getSpinner());
+
+    var paragraphName = paragraphID[0].split('/').pop();
+    var paragraphNumber = Number(paragraphName.split('_').pop()) + 1;
+    var book = paragraphID[0].split('/', 5)[4];
+    var nextPID = window.location.origin + '/corpus/' + book + '/parrafo/par_' + pad(paragraphNumber, 6);
+
+    Wesby.getContext(nextPID, function (ctx) {
+        morph.html('<a href="' + nextPID + '">' + ctx['paragraphText'][0] + '</a>');
+        return ctx;
+    });
+
+    return new Handlebars.SafeString(morph.outerHTML());
+});
+
+Handlebars.registerHelper('concordanceP', function(id, options) {
+    var morph = Metamorph(Wesby.getSpinner());
+    var concordanceCtx = this;
+    // console.log(this);
+    // console.log(options);
+    Wesby.getContext(id, function (ctx) {
+        var word = concordanceCtx.hasWord[0].split('/').pop();
+        var text = ctx[options.hash['textProp']][0].replace(/echasen/ig, '<strong>' + word + '</strong>');
+        morph.html('<a href="' + id + '">' + text + '</a>');
+        return ctx;
+    });
+
+    return new Handlebars.SafeString(morph.outerHTML());
+});
+
 // Word helpers
 // ----------------------------------------------------------------------------
 
@@ -195,3 +244,9 @@ Handlebars.registerHelper('p', function(paragraph, options) {
 // }).done(function (partial) {
 //   Handlebars.registerPartial('pagination', partial);
 // });
+
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
