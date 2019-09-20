@@ -1,28 +1,9 @@
-![Wesby logo](https://github.com/weso/Wesby/raw/master/public/images/wesby-logo-850.png)
-Wesby is a linked data frontend that wraps your RDF resources with custom-built interfaces, effectively turning your SPARQL endpoints into rich HTML5 websites.
+Presentación
+El Corpus de Textos Aljamiado-Moriscos (COTEAM) es uno de los resultado del proyecto Lexicografía aljamiada: nuevos horizontes y herramientas (FFI2014-56120-P), financiado por el Ministerio de Economía y Competitividad, que se desarrolló en el Seminario de Estudios Árabo-Románicos (SEAR) de la Universidad de Oviedo, entre el 1 de enero de 2015 y el 31 de diciembre de 2017. Dirigido por Juan Carlos Busto Cortina, el equipo investigador estuvo formado por Juan Carlos Villaverde Amieva, Francisco José Hidalgo López, Pablo Roza Candás, Raquel Montero, Mirjami Matilainen, Mario Baragaño García, Mohanad Amer Kadhim y Raquel Suárez García.
+COTEAM es una aplicación que permite el acceso a un corpus de textos aljamiado-moriscos (vid. Descripción), de los que pueden consultarse las voces individualizadas que los integran, en su contexto.
+Desde el punto de vista técnico, el objetivo final de este proyecto consiste en publicar la información como datos abiertos, estructurados y enlazados, siguiendo las recomendaciones de la web semántica. Así, la información de las obras incluidas en esta aplicación se ofrece en formato RDF, para cuya modelización se ha definido un vocabulario específico (http://purl.org/coteam), adaptando otras ontologías existentes.
+Se ha buscado una solución que proporcione la mayor accesibilidad y una óptima reutilización de los datos, con un diseño basado en el paradigma linked opendata, que permite que cada elemento de información puesto a disposición (las palabras) pueda ser referenciado en la web a través de URIs.
+Desarrollado en un marco de colaboración transversal, COTEAM surge del aprovechamiento del proyecto fin de carrera Francisco Hidalgo López, así como de la adaptación, realizada por Jorge Yagüe París, del software para la visualización de los datos RDF, desarrollado por el grupo de investigación WESO de la Universidad de Oviedo (www.weso.es).
 
-[![Build Status](https://travis-ci.org/weso/Wesby.svg?branch=2.0)](https://travis-ci.org/weso/Wesby)
-[![codecov.io](http://codecov.io/github/weso/Wesby/coverage.svg?branch=2.0)](http://codecov.io/github/weso/Wesby?branch=2.0)
-[![Stories in Ready](https://img.shields.io/waffle/label/weso/Wesby/ready.svg)](http://waffle.io/weso/wesby)
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/weso/Wesby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/weso/Wesby/2.0/LICENSE.txt)
-[![by WESO](https://img.shields.io/badge/by-WESO-29c7c0.svg)](http://www.weso.es/)
-
-## Features
-* RDF retrieval from SPARQL endpoint
-* Resource caching with [Memcached](http://memcached.org/)
-* Result queries conversion to Json for easy Javascript access to data
-* User defined template binding for RDF types
-* Logic-less templates with HTML5 and [Mustache](http://mustache.github.io/)
-
-## Quick start with Activator
-1. [Install Play! Framework Activator](http://www.playframework.com/documentation/latest/Installing)
-2. [Install Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
-3. `git clone https://github.com/weso/Wesby.git`
-4. `cd Wesby`
-5. `activator run`
-6. Read the [docs](https://github.com/weso/Wesby/wiki)
-
-###### :construction: This document is a work in progress :construction:
 
 
