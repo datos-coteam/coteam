@@ -91,7 +91,7 @@ li a {
     font-weight: 400;
 }
 
-li a.description{
+li.description {
     text-align: justify;
     color: black;
     margin-bottom: 11px;
