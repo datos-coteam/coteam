@@ -87,10 +87,6 @@ a.button {
     color: #ffffff;;
 }
 
-li a {
-    font-weight: 400;
-}
-
 li.description {
     text-align: justify;
     color: black;
@@ -101,6 +97,10 @@ li.description {
     font-family: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
     font-weight: 400;
     line-height: 21px;
+}
+
+li a {
+    font-weight: 400;
 }
 
 p {
