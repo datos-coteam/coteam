@@ -91,6 +91,18 @@ li a {
     font-weight: 400;
 }
 
+li a.description{
+    text-align: justify;
+    color: black;
+    margin-bottom: 11px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+}
+
 p {
     text-align: justify;
     color: black;
