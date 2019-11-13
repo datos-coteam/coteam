@@ -87,7 +87,7 @@ a.button {
     color: #ffffff;;
 }
 
-li.description {
+ol {
     text-align: justify;
     color: black;
     margin-bottom: 11px;
